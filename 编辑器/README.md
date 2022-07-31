@@ -4,20 +4,24 @@
 
 [二改地址](https://github.com/xlboy/Vim)、[原仓库地址](https://github.com/VSCodeVim/Vim)
 
-已打包好的 `二改 VSCodeVIM 插件安装包` 文件位于 `./static` 中（文件名为 `vim-xlboy-0.0.0.vsix`）
+已打包好的 `二改 VSCodeVIM 插件安装包` 文件位于 `./static/vim-xlboy-0.0.0.vsix`
 
 ---
 
 ## 字体
 
-`中文字体` - `仓耳明楷 W05`
+1. `中文字体` - `仓耳明楷 W05`
 
-`英文字体` - `CascadiaCode`（微软专门为程序员而出的一款字体）
+   文件位于 `./static/CascadiaCode.ttf`
 
-  <details>
-  	<summary>效果图</summary>
-  	<img src="./static/font-example.jpg">
-  </details>
+2. `英文字体` - `CascadiaCode`（微软专门为程序员而出的一款字体）
+
+   文件位于 `./static/CascadiaCode.ttf`
+
+3. <details>
+   	<summary>效果图</summary>
+   	<img src="./static/font-example.jpg">
+   </details>
 
 ---
 
