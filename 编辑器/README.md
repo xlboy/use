@@ -39,7 +39,7 @@ JS/TS 代码片段快速执行 - [`Quokka.js`](https://marketplace.visualstudio.
 
 字体快速切换器 - [`Font Switcher`](https://marketplace.visualstudio.com/items?itemName=evan-buss.font-switcher)
 
-灵活的翻译工具（穿梭在`注释`、`变量名` 等等内） - [`Comment Translate`]
+灵活的翻译工具（穿梭在`注释`、`变量名` 等等内） - [`Comment Translate`](https://marketplace.visualstudio.com/items?itemName=intellsmi.comment-translate)
 
 EditorConfig - [`EditorConfig for VS Code`](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
