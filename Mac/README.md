@@ -54,18 +54,22 @@
 
    [下载地址](https://iterm2.com/)
 
-10. Hackintool（黑果专用的工具箱）
+10. zsh 配置（oh-my-zsh）
+
+   [下载地址](https://github.com/ohmyzsh/ohmyzsh)
+
+11. Hackintool（黑果专用的工具箱）
 
     [下载地址](https://www.macwk.com/soft/hackintool)
 
-11. Better And Better（鼠标触控板手势增强）
+12. Better And Better（鼠标触控板手势增强）
 
     [下载地址](https://macwk.com/soft/better-and-better)
 
-12. 超级右键（强大的macOS右键菜单工具）
+13. 超级右键（强大的 macOS 右键菜单工具）
 
     文件位于 `./static/iRightMouse.zip.zip`
 
-12. PlistEdit Pro
+14. PlistEdit Pro
 
     文件位于 `./static/PlistEdit Pro.zip`
