@@ -20,7 +20,11 @@
 
 3. <details>
    	<summary>效果图</summary>
-   	<img src="./static/font-example.jpg">
+      <div>
+   	   <img src="./static/font-example-1.jpg" />
+         <hr style="margin: 30px 0;" />
+         <img src="./static/font-example-2.jpg" />
+      </div>
    </details>
 
 ---
