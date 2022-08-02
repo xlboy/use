@@ -62,6 +62,10 @@
 
     [下载地址](https://macwk.com/soft/better-and-better)
 
+12. 超级右键（强大的macOS右键菜单工具）
+
+    文件位于 `./static/iRightMouse.zip.zip`
+
 12. PlistEdit Pro
 
     文件位于 `./static/PlistEdit Pro.zip`
