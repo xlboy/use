@@ -74,6 +74,12 @@
 
     文件位于 `./static/iRightMouse.zip.zip`
 
-15. PlistEdit Pro
+15. Caffeinated（防止屏幕进入休眠的工具）
+
+    因家中黑果进入休眠/息屏后，会出现概率性的死机情况（印象中，单纯设置系统的防止休眠是无济于事的）
+
+    [下载地址](https://www.macwk.com/soft/caffeinated)
+
+16. PlistEdit Pro
 
     文件位于 `./static/PlistEdit Pro.zip`
