@@ -52,3 +52,7 @@ JS/TS 代码片段快速执行 - [`Quokka.js`](https://marketplace.visualstudio.
 EditorConfig - [`EditorConfig for VS Code`](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
 文件修改后的缓存 - [`Local History`](https://marketplace.visualstudio.com/items?itemName=xyz.local-history)
+
+在 TS 中显式的展示类型（TS-Playground 中的「双斜杠查询」支持） - [`vscode-twoslash-queries`](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-twoslash-queries)
+
+单词检查器 - [`Code Spell Checker`](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
