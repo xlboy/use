@@ -80,6 +80,10 @@
 
     [下载地址](https://www.macwk.com/soft/caffeinated)
 
-16. PlistEdit Pro
+16. xScope（精确度量工具）
+
+    [下载地址](https://www.macwk.com/soft/xscope)
+
+17. PlistEdit Pro
 
     文件位于 `./static/PlistEdit Pro.zip`
