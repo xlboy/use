@@ -57,7 +57,7 @@ map <Leader>s <Plug>(easymotion-s2)
 " Normal Key Mappings
 "----------------------------------------------------------------------
 nnoremap L $
-nnoremap H j
+nnoremap H ^
 nnoremap <leader>d "ad
 nnoremap <leader>c "ac
 
