@@ -1,35 +1,26 @@
 # 编辑器
 
-## VSCodeVIM 二改
+## Neovim
+
+1. [Neovim 下载地址](https://github.com/neovim/neovim)
+
+2. [Plug 下载地址](https://github.com/junegunn/vim-plug)
+
+3. 配置文件位于 `./nvim-config/` 中
+
+
+
+## VSCode
+
+<!-- ### VSCodeVIM 二改
 
 [二改地址](https://github.com/xlboy/Vim)、[原仓库地址](https://github.com/VSCodeVim/Vim)
 
 已打包好的 `二改 VSCodeVIM 插件安装包` 文件位于 `./static/vim-xlboy-0.0.0.vsix`
 
----
+--- -->
 
-## 字体
-
-1. `中文字体` - `仓耳明楷 W05`
-
-   文件位于 `./static/CascadiaCode.ttf`
-
-2. `英文字体` - `CascadiaCode`（微软专门为程序员而出的一款字体）
-
-   文件位于 `./static/CascadiaCode.ttf`
-
-3. <details>
-   	<summary>效果图</summary>
-      <div>
-   	   <img src="./static/font-example-1.jpg" />
-         <hr style="margin: 30px 0;" />
-         <img src="./static/font-example-2.jpg" />
-      </div>
-   </details>
-
----
-
-## 插件
+### 插件
 
 图标 - [`Material Icon Theme`](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
@@ -56,3 +47,24 @@ EditorConfig - [`EditorConfig for VS Code`](https://marketplace.visualstudio.com
 在 TS 中显式的展示类型（TS-Playground 中的「双斜杠查询」支持） - [`vscode-twoslash-queries`](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-twoslash-queries)
 
 单词检查器 - [`Code Spell Checker`](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+
+---
+
+## 字体
+
+1. `中文字体` - `仓耳明楷 W05`
+
+   文件位于 `./static/CascadiaCode.ttf`
+
+2. `英文字体` - `CascadiaCode`（微软专门为程序员而出的一款字体）
+
+   文件位于 `./static/CascadiaCode.ttf`
+
+3. <details>
+   	<summary>效果图</summary>
+      <div>
+   	   <img src="./static/font-example-1.jpg" />
+         <hr style="margin: 30px 0;" />
+         <img src="./static/font-example-2.jpg" />
+      </div>
+   </details>
