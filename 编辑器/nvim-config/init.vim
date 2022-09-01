@@ -1,5 +1,5 @@
 
-lua require('keymaps')
+" lua require('keymaps')
 
 function! Cond(Cond, ...)
   let opts = get(a:000, 0, {})
@@ -57,11 +57,14 @@ map <Leader>s <Plug>(easymotion-s2)
 " Normal Key Mappings
 "----------------------------------------------------------------------
 nnoremap L $
+vnoremap L $
 nnoremap H ^
+vnoremap H ^
 nnoremap <leader>d "ad
 nnoremap <leader>c "ac
 
 inoremap kj <esc>
+
 
 "----------------------------------------------------------------------
 " VSCode key Mappings
