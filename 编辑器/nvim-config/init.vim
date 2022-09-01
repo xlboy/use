@@ -22,6 +22,8 @@ Plug 'booperlv/nvim-gomove'
 Plug 'kevinhwang91/nvim-hlslens'
 Plug 'numToStr/Comment.nvim'
 
+Plug 'psliwka/vim-smoothie'
+
 Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 
@@ -39,6 +41,9 @@ set clipboard=unnamed
 let g:mapleader = ' '
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
+
+nnoremap <unique> <C-D> <cmd>call smoothie#do("\<C-D>") <CR>
+vnoremap <unique> <C-D> <cmd>call smoothie#do("\<C-D>") <CR>
 
 "----------------------------------------------------------------------
 " Easymotion Key Mappings
@@ -85,5 +90,6 @@ nnoremap <silent> z4 <Cmd>call VSCodeNotify('editor.foldLevel4')<CR>
 nnoremap <silent> z5 <Cmd>call VSCodeNotify('editor.foldLevel5')<CR>
 nnoremap <silent> z6 <Cmd>call VSCodeNotify('editor.foldLevel6')<CR>
 nnoremap <silent> z7 <Cmd>call VSCodeNotify('editor.foldLevel7')<CR>
-
 xnoremap <silent> zV <Cmd>call VSCodeNotify('editor.foldAllExcept')<CR>
+
+nnoremap <silent> gt <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
