@@ -30,6 +30,7 @@ Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymot
 call plug#end()
 
 lua require('Comment').setup()
+lua require('nvim-surround').setup()
 
 "----------------------------------------------------------------------
 " Basic Options
