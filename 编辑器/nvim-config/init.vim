@@ -29,6 +29,8 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 Plug 'xlboy/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 
+Plug 'itchyny/vim-cursorword'
+
 call plug#end()
 
 lua require('Comment').setup()
