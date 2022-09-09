@@ -84,6 +84,28 @@
 
     [下载地址](https://www.macwk.com/soft/xscope)
 
-17. PlistEdit Pro
+17. Shottr（丰富的截图工具）
+
+    在单一截图的基础上做了很多丰富的扩展，极大程度的减少了关于截图后的 `一系列操作`
+
+    [下载地址](https://shottr.cc/)
+
+18. KeyCastr（击键可视化工具）
+
+    [下载地址](https://github.com/keycastr/keycastr)
+
+19. Scoot（鼠标模拟工具）
+
+    通过屏幕中的标记字符来模拟鼠标的一系列操作（光标定位、点击、双击等）
+
+    [下载地址](https://github.com/mjrusso/scoot/)
+
+20. Raycast（程序启动器）
+
+    配置文件位于 `./static/Raycast.rayconfig`
+
+    [下载地址](https://www.raycast.com/)
+
+21. PlistEdit Pro
 
     文件位于 `./static/PlistEdit Pro.zip`
