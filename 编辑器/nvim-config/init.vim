@@ -32,6 +32,11 @@ call plug#end()
 lua require('Comment').setup()
 lua require('nvim-surround').setup()
 
+
+autocmd InsertEnter * :!/usr/local/bin/im-select com.apple.keylayout.ABC
+
+
+
 "----------------------------------------------------------------------
 " Basic Options
 "----------------------------------------------------------------------
