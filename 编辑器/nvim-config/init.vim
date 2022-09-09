@@ -21,15 +21,15 @@ Plug 'tpope/vim-surround'
 Plug 'booperlv/nvim-gomove'
 
 Plug 'kevinhwang91/nvim-hlslens'
-Plug 'numToStr/Comment.nvim'
 
-Plug 'psliwka/vim-smoothie'
+Plug 'terryma/vim-smooth-scroll'
 Plug 'chaoren/vim-wordmotion'
 
 Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 Plug 'xlboy/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 
 Plug 'itchyny/vim-cursorword'
+Plug 'rhysd/accelerated-jk'
 
 call plug#end()
 
@@ -39,6 +39,14 @@ lua require('Comment').setup()
 
 autocmd InsertEnter * :!/usr/local/bin/im-select com.apple.keylayout.ABC
 
+
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)
+
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 
 "----------------------------------------------------------------------
@@ -52,9 +60,6 @@ let g:mapleader = ' '
 let g:EasyMotion_startofline = 1 " keep cursor column when JK motion
 let g:wordmotion_prefix = ';'
 
-
-nnoremap <unique> <C-D> <cmd>call smoothie#do("\<C-D>") <CR>
-vnoremap <unique> <C-D> <cmd>call smoothie#do("\<C-D>") <CR>
 
 "----------------------------------------------------------------------
 " Easymotion Key Mappings
