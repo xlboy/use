@@ -16,7 +16,8 @@ Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
 
 " 环绕
-Plug 'kylechui/nvim-surround'
+" Plug 'kylechui/nvim-surround'
+Plug 'tpope/vim-surround'
 Plug 'booperlv/nvim-gomove'
 
 Plug 'kevinhwang91/nvim-hlslens'
@@ -31,7 +32,7 @@ Plug 'xlboy/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' }
 call plug#end()
 
 lua require('Comment').setup()
-lua require('nvim-surround').setup()
+" lua require('nvim-surround').setup()
 
 
 autocmd InsertEnter * :!/usr/local/bin/im-select com.apple.keylayout.ABC
