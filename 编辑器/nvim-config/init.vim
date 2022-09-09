@@ -23,6 +23,7 @@ Plug 'kevinhwang91/nvim-hlslens'
 Plug 'numToStr/Comment.nvim'
 
 Plug 'psliwka/vim-smoothie'
+Plug 'chaoren/vim-wordmotion'
 
 Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 Plug 'xlboy/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
@@ -46,6 +47,7 @@ set clipboard=unnamed
 
 let g:mapleader = ' '
 let g:EasyMotion_startofline = 1 " keep cursor column when JK motion
+let g:wordmotion_prefix = ';'
 
 
 nnoremap <unique> <C-D> <cmd>call smoothie#do("\<C-D>") <CR>
