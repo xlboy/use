@@ -13,7 +13,7 @@ call plug#begin("~/.vim/plugged")
 
 Plug 'tpope/vim-sensible'
 " 主题
-Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/seoul256.vi´'
 
 " 环绕
 " Plug 'kylechui/nvim-surround'
@@ -22,14 +22,14 @@ Plug 'booperlv/nvim-gomove'
 
 Plug 'kevinhwang91/nvim-hlslens'
 
-Plug 'terryma/vim-smooth-scroll'
+Plug 'terryma/vim-smooth-scrol´'
 Plug 'chaoren/vim-wordmotion'
 
 Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 Plug 'xlboy/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 
 Plug 'itchyny/vim-cursorword'
-Plug 'rhysd/accelerated-jk'
+" Plug 'rhysd/accelerated-jk'
 
 call plug#end()
 
@@ -40,8 +40,8 @@ lua require('Comment').setup()
 autocmd InsertEnter * :!/usr/local/bin/im-select com.apple.keylayout.ABC
 
 
-nmap j <Plug>(accelerated_jk_gj)
-nmap k <Plug>(accelerated_jk_gk)
+" nmap j <Plug>(accelerated_jk_gj)
+" nmap k <Plug>(accelerated_jk_gk)
 
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
