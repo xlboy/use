@@ -13,7 +13,7 @@ call plug#begin("~/.vim/plugged")
 
 Plug 'tpope/vim-sensible'
 " 主题
-Plug 'junegunn/seoul256.vi´'
+Plug 'junegunn/seoul256.vim'
 
 " 环绕
 " Plug 'kylechui/nvim-surround'
@@ -22,7 +22,7 @@ Plug 'booperlv/nvim-gomove'
 
 Plug 'kevinhwang91/nvim-hlslens'
 
-Plug 'terryma/vim-smooth-scrol´'
+Plug 'terryma/vim-smooth-scroll'
 Plug 'chaoren/vim-wordmotion'
 
 Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
