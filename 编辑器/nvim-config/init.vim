@@ -11,37 +11,35 @@ endfunction
 "----------------------------------------------------------------------
 call plug#begin("~/.vim/plugged")
 
+" 基础设置
 Plug 'tpope/vim-sensible'
 " 主题
 Plug 'junegunn/seoul256.vim'
 
 " 环绕
-" Plug 'kylechui/nvim-surround'
 Plug 'tpope/vim-surround'
 Plug 'booperlv/nvim-gomove'
 
-Plug 'kevinhwang91/nvim-hlslens'
-
 Plug 'terryma/vim-smooth-scroll'
+
+" 各类单词的跳转（例：大写单词、小写单词、全大写单词...）
 Plug 'chaoren/vim-wordmotion'
+
+Plug 'yamatsum/nvim-cursorline'
+
 
 Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 Plug 'xlboy/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
-
+Plug 'rhysd/clever-f.vim'
 Plug 'itchyny/vim-cursorword'
-" Plug 'rhysd/accelerated-jk'
 
 call plug#end()
 
 lua require('Comment').setup()
-" lua require('nvim-surround').setup()
 
 
-autocmd InsertEnter * :!/usr/local/bin/im-select com.apple.keylayout.ABC
+" autocmd InsertEnter * :!/usr/local/bin/im-select com.apple.keylayout.ABC
 
-
-" nmap j <Plug>(accelerated_jk_gj)
-" nmap k <Plug>(accelerated_jk_gk)
 
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
@@ -71,7 +69,8 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>b <Plug>(easymotion-b)
 map <Leader>w <Plug>(easymotion-w)
-map <Leader>s <Plug>(easymotion-s2)
+
+
 
 
 "----------------------------------------------------------------------
