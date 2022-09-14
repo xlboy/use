@@ -8,8 +8,6 @@
 
 3. 配置文件位于 `./nvim-config/` 中
 
-
-
 ## VSCode
 
 <!-- ### VSCodeVIM 二改
@@ -47,6 +45,8 @@ EditorConfig - [`EditorConfig for VS Code`](https://marketplace.visualstudio.com
 在 TS 中显式的展示类型（TS-Playground 中的「双斜杠查询」支持） - [`vscode-twoslash-queries`](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-twoslash-queries)
 
 单词检查器 - [`Code Spell Checker`](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+
+代码聚焦 - [`Focus`](https://marketplace.visualstudio.com/items?itemName=QuanLi.focus)
 
 ---
 
