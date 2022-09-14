@@ -41,10 +41,10 @@ lua require('Comment').setup()
 " autocmd InsertEnter * :!/usr/local/bin/im-select com.apple.keylayout.ABC
 
 
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+" noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
+" noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
+" noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+" noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 
 "----------------------------------------------------------------------
