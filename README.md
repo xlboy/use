@@ -4,6 +4,10 @@
 
 --- 
 
-- [编辑器（VSCode, Neovim）](./%E7%BC%96%E8%BE%91%E5%99%A8/README.md)
+- [编辑器（VSCode, Neovim）](./编辑器/README.md)
 
 - [Mac](./Mac/README.md)
+
+- [CSGO](./CSGO/README.md)
+
+- [键盘](./键盘/README.md)
