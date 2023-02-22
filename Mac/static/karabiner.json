@@ -1,0 +1,25 @@
+{
+  "title": "xlboy-karabiner",
+  "rules": [
+    {
+      "description": "`cmd-j` to `esc`（vim keyboard）",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": ["left_gui"]
+            },
+            "key_code": "j"
+          },
+          "to": [
+            {
+              "repeat": false,
+              "key_code": "escape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

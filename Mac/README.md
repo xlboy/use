@@ -109,3 +109,10 @@
 21. PlistEdit Pro
 
     文件位于 `./static/PlistEdit Pro.zip`
+    
+22. Karabiner-Elements（键盘映射工具）
+
+    个人配置文件位于 `./static/karabiner.json`
+
+    [下载地址](https://karabiner-elements.pqrs.org/)
+
