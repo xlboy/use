@@ -1,6 +1,4 @@
 
-" lua require('keymaps')
-
 function! Cond(Cond, ...)
   let opts = get(a:000, 0, {})
   return a:Cond ? opts : extend(opts, { 'on': [], 'for': [] })
@@ -23,54 +21,56 @@ Plug 'booperlv/nvim-gomove'
 Plug 'terryma/vim-smooth-scroll'
 
 " 各类单词的跳转（例：大写单词、小写单词、全大写单词...）
-Plug 'chaoren/vim-wordmotion'
+" Plug 'chaoren/vim-wordmotion'
 
-Plug 'yamatsum/nvim-cursorline'
+" Plug 'yamatsum/nvim-cursorline'
 
 
-Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
-Plug 'xlboy/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+" Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
+" Plug 'xlboy/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 Plug 'rhysd/clever-f.vim'
 Plug 'itchyny/vim-cursorword'
+Plug 'ggandor/leap.nvim'
+Plug 'numToStr/Comment.nvim'
 
 call plug#end()
 
 lua require('Comment').setup()
 
-
 " autocmd InsertEnter * :!/usr/local/bin/im-select com.apple.keylayout.ABC
 
+noremap <silent> <S-u> :call smooth_scroll#up(&scroll, 12, 2)<CR>
+noremap <silent> <S-d> :call smooth_scroll#down(&scroll, 12, 2)<CR>
+noremap <silent> <S-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <S-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
-" noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
-" noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
-" noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-" noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
-
+lua require('leap').add_default_mappings()
 
 "----------------------------------------------------------------------
 " Basic Options
 "----------------------------------------------------------------------
-colo seoul256
+color seoul256
 set background=light
 set clipboard=unnamed
 
 let g:mapleader = ' '
-let g:EasyMotion_startofline = 1 " keep cursor column when JK motion
-let g:wordmotion_prefix = ';'
-
+let g:clever_f_across_no_line = 1
 
 "----------------------------------------------------------------------
-" Easymotion Key Mappings
+" Easymotion
 " https://raw.githubusercontent.com/Lokaltog/vim-easymotion/master/doc/easymotion.txt
 "---------------------------------------------------------------------
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>h <Plug>(easymotion-linebackward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>b <Plug>(easymotion-b)
-map <Leader>w <Plug>(easymotion-w)
+" Key Mapping
+" map <Leader>l <Plug>(easymotion-lineforward)
+" map <Leader>h <Plug>(easymotion-linebackward)
+" map <Leader>j <Plug>(easymotion-j)
+" map <Leader>k <Plug>(easymotion-k)
+" map <Leader>b <Plug>(easymotion-b)
+" map <Leader>w <Plug>(easymotion-w)
 
-
+" Config
+" let g:EasyMotion_startofline = 1 " keep cursor column when JK motion
+" let g:wordmotion_prefix = ';'
 
 
 "----------------------------------------------------------------------
@@ -87,7 +87,7 @@ inoremap kj <esc>
 
 
 "----------------------------------------------------------------------
-" VSCode key Mappings
+" VSCode Key Mappings
 "----------------------------------------------------------------------
 
 nnoremap <silent> za <Cmd>call VSCodeNotify('editor.toggleFold')<CR>
