@@ -25,9 +25,8 @@ Plug 'chaoren/vim-wordmotion'
 
 " Plug 'yamatsum/nvim-cursorline'
 
-
-" Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
-" Plug 'xlboy/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
+Plug 'xlboy/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 Plug 'rhysd/clever-f.vim'
 Plug 'itchyny/vim-cursorword'
 Plug 'ggandor/leap.nvim'
@@ -61,16 +60,16 @@ let g:clever_f_across_no_line = 1
 " https://raw.githubusercontent.com/Lokaltog/vim-easymotion/master/doc/easymotion.txt
 "---------------------------------------------------------------------
 " Key Mapping
-" map <Leader>l <Plug>(easymotion-lineforward)
-" map <Leader>h <Plug>(easymotion-linebackward)
-" map <Leader>j <Plug>(easymotion-j)
-" map <Leader>k <Plug>(easymotion-k)
-" map <Leader>b <Plug>(easymotion-b)
-" map <Leader>w <Plug>(easymotion-w)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>h <Plug>(easymotion-linebackward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>b <Plug>(easymotion-b)
+map <Leader>w <Plug>(easymotion-w)
 
 " Config
-" let g:EasyMotion_startofline = 1 " keep cursor column when JK motion
-" let g:wordmotion_prefix = ';'
+let g:EasyMotion_startofline = 1 " keep cursor column when JK motion
+let g:wordmotion_prefix = ';'
 
 
 "----------------------------------------------------------------------
