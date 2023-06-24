@@ -21,7 +21,7 @@ Plug 'booperlv/nvim-gomove'
 Plug 'terryma/vim-smooth-scroll'
 
 " 各类单词的跳转（例：大写单词、小写单词、全大写单词...）
-" Plug 'chaoren/vim-wordmotion'
+Plug 'chaoren/vim-wordmotion'
 
 " Plug 'yamatsum/nvim-cursorline'
 
