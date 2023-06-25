@@ -25,8 +25,9 @@ Plug 'chaoren/vim-wordmotion'
 
 " Plug 'yamatsum/nvim-cursorline'
 
-Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
-Plug 'xlboy/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
+" Plug 'xlboy/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 Plug 'rhysd/clever-f.vim'
 Plug 'itchyny/vim-cursorword'
 Plug 'ggandor/leap.nvim'
@@ -39,7 +40,9 @@ lua require('Comment').setup()
 " autocmd InsertEnter * :!/usr/local/bin/im-select com.apple.keylayout.ABC
 
 noremap <silent> <S-u> :call smooth_scroll#up(&scroll, 12, 2)<CR>
+noremap <silent> <S-k> :call smooth_scroll#up(&scroll/2, 12, 2)<CR>
 noremap <silent> <S-d> :call smooth_scroll#down(&scroll, 12, 2)<CR>
+noremap <silent> <S-j> :call smooth_scroll#down(&scroll/2, 12, 2)<CR>
 noremap <silent> <S-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <S-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
