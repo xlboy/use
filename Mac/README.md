@@ -12,6 +12,8 @@
 
 1. SteelSeries ExactMouse Tool（关闭`鼠标加速`）
 
+   > Mac 14 之后，可在系统设置中关闭了（泪目…）
+
    文件位于 `./static/SteelSeries ExactMouse Tool.zip`
 
 2. CatchMouse（光标切换）
@@ -109,10 +111,48 @@
 21. PlistEdit Pro
 
     文件位于 `./static/PlistEdit Pro.zip`
-    
+
 22. Karabiner-Elements（键盘映射工具）
 
     个人配置文件位于 `./static/karabiner.json`
 
     [下载地址](https://karabiner-elements.pqrs.org/)
 
+23. Tiny RDM（Redis 管理工具）
+    [下载地址](https://github.com/tiny-craft/tiny-rdm)
+
+24. ProxyMan（代理工具）
+    [下载地址](https://github.com/ProxymanApp/Proxyman)
+
+## 其他设置
+
+### Docker
+
+#### 安装
+
+```bash
+brew install --cask docker
+```
+
+#### 子软件
+
+- Mysql@5.7
+
+```bash
+docker pull liupeng0518/mysql:5.7-arm64
+
+mkdir -p ~/docker-configs/mysql57
+mkdir -p ~/docker-configs/mysql57/data
+cd ~/docker-configs/mysql57
+
+echo "[mysqld]
+sql_mode=ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION" > my.cnf
+
+docker run -d \
+  --name mysql57 \
+  -p 3306:3306 \
+  -v ~/docker-configs/mysql57/my.cnf:/etc/mysql/conf.d/my.cnf \
+  -v ~/docker-configs/mysql57/data:/var/lib/mysql \
+  -e MYSQL_ALLOW_EMPTY_PASSWORD=yes \
+  liupeng0518/mysql:5.7-arm64
+```

@@ -1,13 +1,15 @@
+# 092fm schema settings
 # encoding: utf-8
 
 schema:
-  schema_id: 九重魔鹤
-  name: 九重魔鹤
+  schema_id: 091s2
+  name: 九重鹤
   version: "1.0"
   author:
-    - xlboy
+    - 方案设计：行走的风景
+    - 方案修改：监寺师叔
   description: |
-    小鹤音形 9 重版
+    092五笔澈丹三重版
   dependencies:
     - pinyin_simp
 
@@ -15,10 +17,10 @@ punctuator:
   import_preset: default
 
 switches: # 可在状态栏上显示的内容，去掉下面的"#"号可开启
-  - options: [_keyboard_menu]
-    states: ["　☰"]
+  - options: [ _keyboard_menu ]
+    states: [ "　☰" ]
   - name: ascii_mode
-    states: [CN, EN]
+    states: [ CN, EN ]
     reset: 0
   - name: full_shape
     #states: [ ◖, ● ]
@@ -26,14 +28,14 @@ switches: # 可在状态栏上显示的内容，去掉下面的"#"号可开启
   - name: _hide_key_hint
     #states: [ ≑, ≟ ]
     reset: 0
-  - options: [_keyboard_emoji, _keyboard_emoji]
-    states: ["🎏", "😂"]
-  - options: [_keyboard_number]
+  - options: [ _keyboard_emoji, _keyboard_emoji ]
+    states: [ "🎏", "😂"]
+  - options: [ _keyboard_number ]
     #states: [ 123 ]
     ascii_mode: 0
   - options: [_key_IXH]
     #states: [㊫]
-  - options: [_key_VOICE_ASSIST]
+  - options: [ _key_VOICE_ASSIST ]
     #states: [ "🎤" ]
   - name: simplification
     #states: [ 简, 繁 ]
@@ -44,11 +46,11 @@ switches: # 可在状态栏上显示的内容，去掉下面的"#"号可开启
   - name: ascii_punct
     #states: [ "，。", " ,　. " ]
     reset: 0
-  - options: [_keyboard_default, _keyboard_defaultVJ]
-    states: ["　　　　　　　", "　　　　　　　"]
-  - options: [_key_Hide]
-    states: [﹀]
-
+  - options: [ _keyboard_default, _keyboard_defaultVJ]
+    states: [ "　　　　　　　", "　　　　　　　"]
+  - options: [ _key_Hide ]
+    states: [ ﹀ ]
+    
 engine:
   processors:
     - ascii_composer
@@ -78,13 +80,13 @@ engine:
     - uniquifier
 
 speller:
-  alphabet: "/;zyxwvutsrqponmlkjihgfedcba"
-  initials: "abcdefghijklmnopqrstuvwxyz;"
-  finals: "/"
+  alphabet: '/;zyxwvutsrqponmlkjihgfedcba'
+  initials: 'abcdefghijklmnopqrstuvwxyz;'
+  finals: '/'
   #delimiter: " '"
   max_code_length: 4 #全码码长，过则顶字上屏
-  auto_select: true #自动上屏
-  auto_select_pattern: ^;.$|^/w{4}$ #自动上屏规则
+  auto_select: true   #自动上屏
+  auto_select_pattern: ^;.$|^\w{4}$ #自动上屏规则
   auto_clear: max_length #manual|auto|max_length 空码按下一键确认清屏|空码自动清|达到最长码时后码顶上清屏
 
 translator:
@@ -96,52 +98,53 @@ translator:
   disable_user_dict_for_patterns:
     - "^z.*$"
 
+   
 # historyF:
-#    input: /
+#    input: \
 #    size: 1 #重复前几次上屏
 #    initial_quality: 1 #首选
-
+   
 simplification:
   opencc_config: s2tw.json
   option_name: simplification
-  tips: all #简繁对照，all字詞  char字
+  tips: all  #简繁对照，all字詞  char字
 
 reverse_lookup:
   dictionary: pinyin_simp
   comment_format:
-    # - xform/^/〔/
-    # - xform/$/〕/
+   # - xform/^/〔/
+   # - xform/$/〕/
     - xform/ / /
 
 key_binder:
   import_preset: default #方案切换相关
   bindings:
-    - { accept: bracketleft, send: Page_Up, when: paging } # [上翻页
-    - { accept: bracketright, send: Page_Down, when: has_menu } # ]下翻页
-    - { accept: "Shift_L", send: 6, when: has_menu } #大写键选5重
-    - { accept: "Tab", send: 6, when: has_menu } #TAB键选6重
-    - { accept: "0", send: 7, when: has_menu } #数字键0-7选
-    - { accept: semicolon, send: 8, when: has_menu } #分号8选
-    - { accept: Return, send: 9, when: has_menu } #回车9选
+    - {accept: bracketleft, send: Page_Up, when: paging} # [上翻页
+    - {accept: bracketright, send: Page_Down, when: has_menu} # ]下翻页
+    - {accept: "Shift_L", send: 6, when: has_menu} #大写键选5重
+    - {accept: "Tab", send: 6, when: has_menu} #TAB键选6重
+    - {accept: "0", send: 7, when: has_menu} #数字键0-7选
+    - {accept: semicolon, send: 8, when: has_menu} #分号8选
+    - {accept: Return, send: 9, when: has_menu} #回车9选
     #- {accept: Release+semicolon, send: semicolon, when: has_menu} #如要使用分号引导符号功能，并双击上屏分号，需注销此行
     #- {accept: period, send: 2, when: has_menu} #句号次选，已用下面内容替代
     #- {accept: comma, send: comma, when: paging} #注销逗号翻页
-    - { accept: period, send: period, when: has_menu } #注销句号翻页
-    - { accept: dollar, send: 2, when: composing }
-    - { accept: Release+dollar, send: period, when: composing }
-    - { accept: Release+period, send: period, when: composing } #句号顶屏
+    - {accept: period, send: period, when: has_menu} #注销句号翻页
+    - {accept: dollar, send: 2, when: composing}
+    - {accept: Release+dollar, send: period, when: composing}
+    - {accept: Release+period, send: period, when: composing} #句号顶屏
     # - {accept: comma, send: 3, when: has_menu} #逗号次选
-    - { accept: bar, send: 2, when: composing }
-    - { accept: Release+bar, send: comma, when: composing }
-    - { accept: Release+comma, send: comma, when: composing } #逗号顶屏
-    - { accept: "Tab", send: Escape, when: composing }
-    - { accept: "Caps_Lock", send: Escape, when: composing }
-    - { accept: "Shift_R", send: Escape, when: composing }
+    - {accept: bar, send: 2, when: composing}
+    - {accept: Release+bar, send: comma, when: composing}
+    - {accept: Release+comma, send: comma, when: composing} #逗号顶屏
+    - {accept: "Tab", send: Escape, when: composing}
+    - {accept: "Caps_Lock", send: Escape, when: composing} 
+    - {accept: "Shift_R", send: Escape, when: composing}
     # - {accept: "command+.", toggle: full_shape, when: always} #切换全半角
-    - { accept: "Control+j", toggle: simplification, when: always } #切换简繁
-    - { accept: "Control+period", toggle: ascii_punct, when: always } #切换中英标点
-    - { accept: "Control+m", select: .next, when: always } #切换方案
-
+    - {accept: "Control+j", toggle: simplification, when: always} #切换简繁
+    - {accept: "Control+period", toggle: ascii_punct, when: always} #切换中英标点
+    - {accept: "Control+m", select: .next, when: always} #切换方案
+   
 recognizer:
   import_preset: default
   patterns:
@@ -152,6 +155,7 @@ recognizer:
 
 menu:
   page_size: 9 #候选项数
-
+  
 style:
   horizontal: false #竖排为false
+  
