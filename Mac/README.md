@@ -141,9 +141,9 @@ brew install --cask docker
 ```bash
 docker pull liupeng0518/mysql:5.7-arm64
 
-mkdir -p ~/docker-configs/mysql57
-mkdir -p ~/docker-configs/mysql57/data
-cd ~/docker-configs/mysql57
+mkdir -p ~/.docker-local/mysql57
+mkdir -p ~/.docker-local/mysql57/data
+cd ~/.docker-local/mysql57
 
 echo "[mysqld]
 sql_mode=ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION" > my.cnf
@@ -151,8 +151,26 @@ sql_mode=ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_EN
 docker run -d \
   --name mysql57 \
   -p 3306:3306 \
-  -v ~/docker-configs/mysql57/my.cnf:/etc/mysql/conf.d/my.cnf \
-  -v ~/docker-configs/mysql57/data:/var/lib/mysql \
+  -v ~/.docker-local/mysql57/my.cnf:/etc/mysql/conf.d/my.cnf \
+  -v ~/.docker-local/mysql57/data:/var/lib/mysql \
   -e MYSQL_ALLOW_EMPTY_PASSWORD=yes \
   liupeng0518/mysql:5.7-arm64
+```
+
+- Redis
+
+```bash
+docker pull redis
+
+mkdir -p ~/.docker-local/redis/data
+cd ~/.docker-local/redis
+
+echo "appendonly no" > ~/.docker-local/redis/redis.conf
+
+docker run -d \
+  --name redis \
+  -p 6379:6379 \
+  -v ~/.docker-local/redis/data:/data \
+  -v ~/.docker-local/redis/redis.conf:/usr/local/etc/redis/redis.conf \
+  redis redis-server /usr/local/etc/redis/redis.conf
 ```
